@@ -14,18 +14,20 @@ Animal.prototype = {
   getSizeAtAge: function(age) {
     if (this.type === "dog"){
       return 5 * age;
-    } 
-    else if (this.type == "fish"){
+    } else if (this.type == "fish"){
       return 2 * age;
+    } else {
+      return age;
     }
   }
+  
 }
 
 
 var ziggy = new Animal("Ziggy", "dog", "Woof!", 10);
 var nemo = new Animal("Nemo", "fish", "bubble!", 2);
 
-print(ziggy.name + " is a " + ziggy.type);
+print(ziggy.name + " is a " + ziggy.type + " and makes the sound " + ziggy.sound);
 print(nemo.toString());
 print(ziggy.makeNoise());
 print(nemo.makeNoise());
