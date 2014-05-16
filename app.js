@@ -1,8 +1,8 @@
-function Animal(name, type, sound) {
+var Animal = function (name, type, sound) {  // this could also be `function Animal (name, type, sound) { ` 
   this.name = name;
   this.type = type;
   this.sound = sound;
-}
+};
 
 Animal.prototype = {
   toString: function () {
